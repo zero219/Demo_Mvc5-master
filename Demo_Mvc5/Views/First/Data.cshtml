@@ -1,0 +1,14 @@
+﻿@model Demo_Mvc5.Models.UserModel.CurrentUser
+@using Demo_Mvc5.Models.UserModel
+@{
+    ViewBag.Title = "Data";
+    CurrentUser userViewData = ViewData["User1"] as CurrentUser;//ViewData需要类型转换
+    CurrentUser userViewBag = ViewBag.User;//ViewBag直接用
+    CurrentUser userOther = ViewBag.User1;//ViewBag和ViewData数据相通
+    CurrentUser userOther2 = ViewData["User"] as CurrentUser;
+    CurrentUser userOther3 = TempData["User"] as CurrentUser;
+    string name = base.Model.Name;//先声明model属性（@model Demo_Mvc5.Models.User.CurrentUser）
+}
+
+<h2>Data</h2>
+

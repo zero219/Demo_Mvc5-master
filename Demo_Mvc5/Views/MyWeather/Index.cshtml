@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Index", "MyWeather", FormMethod.Post))
+{
+    <div>请输入查询的城市：@Html.TextBox("city")<input type="submit" value="查询" /></div>
+    <div>
+        天气概况：@ViewBag.General
+        @{ if (!string.IsNullOrEmpty(ViewBag.ImgUrl as string))
+            {
+                <img src="@ViewBag.ImgUrl" />
+            }
+        }
+    </div>
+    <div>天气实况： @ViewBag.Actually</div>
+    <div>@ViewBag.Msg</div>
+}

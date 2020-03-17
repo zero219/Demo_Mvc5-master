@@ -1,0 +1,10 @@
+﻿@using Demo_Mvc5.Models.RazorHtml;
+@{
+    ViewBag.Title = "Handler";
+}
+
+<h2>Handler</h2>
+<p>@ViewBag.HandlerName</p>
+<p>@ViewBag.Url</p>
+<p>@Html.Image("/Content/Image/1.jpeg", "图片", "皮卡丘", new { id = "image" })</p>
+@*<p><img src="~/Content/Image/1.jpeg" /></p>*@

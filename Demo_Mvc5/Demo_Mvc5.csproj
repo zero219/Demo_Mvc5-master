@@ -1,0 +1,527 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{38FCE3EA-C95E-4DF2-A0C0-F2F55FDBCB01}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demo_Mvc5</RootNamespace>
+    <AssemblyName>Demo_Mvc5</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.6\lib\net45\CommonServiceLocator.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Abstractions, Version=3.1.3.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Abstractions.3.1.3\lib\net45\Unity.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Configuration, Version=5.1.3.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.6\lib\net45\Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Container, Version=5.5.6.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.6\lib\net45\Unity.Container.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception, Version=5.3.1.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.Interception.5.3.1\lib\net45\Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Interception.Configuration, Version=5.1.3.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.6\lib\net45\Unity.Interception.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.RegistrationByConvention, Version=2.1.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.6\lib\net45\Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.ServiceLocation, Version=2.1.0.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.5.5.6\lib\net45\Unity.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.4\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.4\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.4\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.DiagnosticSource">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.TelemetryCorrelation">
+      <HintPath>..\packages\Microsoft.AspNet.TelemetryCorrelation.1.0.0\lib\net45\Microsoft.AspNet.TelemetryCorrelation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IocConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\System\Controllers\HomeController.cs" />
+    <Compile Include="Areas\System\SystemAreaRegistration.cs" />
+    <Compile Include="Controllers\FirstController.cs" />
+    <Compile Include="Controllers\FourthController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MyWeatherController.cs" />
+    <Compile Include="Controllers\PipeController.cs" />
+    <Compile Include="Controllers\SecondController.cs" />
+    <Compile Include="Controllers\ThirdController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Ignore\VerifyCode.cs" />
+    <Compile Include="Ignore\WebServiceTest.asmx.cs">
+      <DependentUpon>WebServiceTest.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Models\Extension\EnumExtension.cs" />
+    <Compile Include="Models\Filter\AjaxResult.cs" />
+    <Compile Include="Models\Filter\AuthorityFilterAttribute.cs" />
+    <Compile Include="Models\Filter\CacheFilter.cs" />
+    <Compile Include="Models\Filter\CompressFilter.cs" />
+    <Compile Include="Models\Filter\LogExceptionFilter.cs" />
+    <Compile Include="Models\Filter\MyActionFilterAttribute.cs" />
+    <Compile Include="Models\Filter\RenderFilter.cs" />
+    <Compile Include="Models\Handler\ImageHandler.cs" />
+    <Compile Include="Models\Ioc\DIFactory.cs" />
+    <Compile Include="Models\Ioc\UnityControllerFactoryNew.cs" />
+    <Compile Include="Models\JsonModel\JsonHelper.cs" />
+    <Compile Include="Models\Login\LoginResult.cs" />
+    <Compile Include="Models\Login\RemarkAttribute.cs" />
+    <Compile Include="Models\Login\UserManage.cs" />
+    <Compile Include="Models\Log\Logger.cs" />
+    <Compile Include="Models\Md5\MD5Encrypt.cs" />
+    <Compile Include="Models\Modules\BaseModules.cs" />
+    <Compile Include="Models\RazorHtml\HtmlExtension.cs" />
+    <Compile Include="Models\RouteModel\ExtendRoute.cs" />
+    <Compile Include="Models\RouteModel\ZzcHandler.cs" />
+    <Compile Include="Models\RouteModel\ZzcRouteHandler.cs" />
+    <Compile Include="Models\UserModel\CurrentUser.cs" />
+    <Compile Include="Models\VerifyCode\VerifyCodeHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Test\MyHandler.ashx.cs">
+      <DependentUpon>MyHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Test\MyWebForm.aspx.cs">
+      <DependentUpon>MyWebForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test\MyWebForm.aspx.designer.cs">
+      <DependentUpon>MyWebForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Weather\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Image\1.jpeg" />
+    <Content Include="Content\Image\Forbidden.jpg" />
+    <Content Include="Content\weather\0.gif" />
+    <Content Include="Content\weather\1.gif" />
+    <Content Include="Content\weather\10.gif" />
+    <Content Include="Content\weather\11.gif" />
+    <Content Include="Content\weather\12.gif" />
+    <Content Include="Content\weather\13.gif" />
+    <Content Include="Content\weather\14.gif" />
+    <Content Include="Content\weather\15.gif" />
+    <Content Include="Content\weather\16.gif" />
+    <Content Include="Content\weather\17.gif" />
+    <Content Include="Content\weather\18.gif" />
+    <Content Include="Content\weather\19.gif" />
+    <Content Include="Content\weather\2.gif" />
+    <Content Include="Content\weather\20.gif" />
+    <Content Include="Content\weather\21.gif" />
+    <Content Include="Content\weather\22.gif" />
+    <Content Include="Content\weather\23.gif" />
+    <Content Include="Content\weather\24.gif" />
+    <Content Include="Content\weather\25.gif" />
+    <Content Include="Content\weather\26.gif" />
+    <Content Include="Content\weather\27.gif" />
+    <Content Include="Content\weather\28.gif" />
+    <Content Include="Content\weather\29.gif" />
+    <Content Include="Content\weather\3.gif" />
+    <Content Include="Content\weather\30.gif" />
+    <Content Include="Content\weather\31.gif" />
+    <Content Include="Content\weather\4.gif" />
+    <Content Include="Content\weather\5.gif" />
+    <Content Include="Content\weather\6.gif" />
+    <Content Include="Content\weather\7.gif" />
+    <Content Include="Content\weather\8.gif" />
+    <Content Include="Content\weather\9.gif" />
+    <Content Include="Content\weather\a_0.gif" />
+    <Content Include="Content\weather\a_1.gif" />
+    <Content Include="Content\weather\a_10.gif" />
+    <Content Include="Content\weather\a_11.gif" />
+    <Content Include="Content\weather\a_12.gif" />
+    <Content Include="Content\weather\a_13.gif" />
+    <Content Include="Content\weather\a_14.gif" />
+    <Content Include="Content\weather\a_15.gif" />
+    <Content Include="Content\weather\a_16.gif" />
+    <Content Include="Content\weather\a_17.gif" />
+    <Content Include="Content\weather\a_18.gif" />
+    <Content Include="Content\weather\a_19.gif" />
+    <Content Include="Content\weather\a_2.gif" />
+    <Content Include="Content\weather\a_20.gif" />
+    <Content Include="Content\weather\a_21.gif" />
+    <Content Include="Content\weather\a_22.gif" />
+    <Content Include="Content\weather\a_23.gif" />
+    <Content Include="Content\weather\a_24.gif" />
+    <Content Include="Content\weather\a_25.gif" />
+    <Content Include="Content\weather\a_26.gif" />
+    <Content Include="Content\weather\a_27.gif" />
+    <Content Include="Content\weather\a_28.gif" />
+    <Content Include="Content\weather\a_29.gif" />
+    <Content Include="Content\weather\a_3.gif" />
+    <Content Include="Content\weather\a_30.gif" />
+    <Content Include="Content\weather\a_31.gif" />
+    <Content Include="Content\weather\a_4.gif" />
+    <Content Include="Content\weather\a_5.gif" />
+    <Content Include="Content\weather\a_6.gif" />
+    <Content Include="Content\weather\a_7.gif" />
+    <Content Include="Content\weather\a_8.gif" />
+    <Content Include="Content\weather\a_9.gif" />
+    <Content Include="Content\weather\a_nothing.gif" />
+    <Content Include="Content\weather\b_0.gif" />
+    <Content Include="Content\weather\b_1.gif" />
+    <Content Include="Content\weather\b_10.gif" />
+    <Content Include="Content\weather\b_11.gif" />
+    <Content Include="Content\weather\b_12.gif" />
+    <Content Include="Content\weather\b_13.gif" />
+    <Content Include="Content\weather\b_14.gif" />
+    <Content Include="Content\weather\b_15.gif" />
+    <Content Include="Content\weather\b_16.gif" />
+    <Content Include="Content\weather\b_17.gif" />
+    <Content Include="Content\weather\b_18.gif" />
+    <Content Include="Content\weather\b_19.gif" />
+    <Content Include="Content\weather\b_2.gif" />
+    <Content Include="Content\weather\b_20.gif" />
+    <Content Include="Content\weather\b_21.gif" />
+    <Content Include="Content\weather\b_22.gif" />
+    <Content Include="Content\weather\b_23.gif" />
+    <Content Include="Content\weather\b_24.gif" />
+    <Content Include="Content\weather\b_25.gif" />
+    <Content Include="Content\weather\b_26.gif" />
+    <Content Include="Content\weather\b_27.gif" />
+    <Content Include="Content\weather\b_28.gif" />
+    <Content Include="Content\weather\b_29.gif" />
+    <Content Include="Content\weather\b_3.gif" />
+    <Content Include="Content\weather\b_30.gif" />
+    <Content Include="Content\weather\b_31.gif" />
+    <Content Include="Content\weather\b_4.gif" />
+    <Content Include="Content\weather\b_5.gif" />
+    <Content Include="Content\weather\b_6.gif" />
+    <Content Include="Content\weather\b_7.gif" />
+    <Content Include="Content\weather\b_8.gif" />
+    <Content Include="Content\weather\b_9.gif" />
+    <Content Include="Content\weather\b_nothing.gif" />
+    <Content Include="Content\weather\nothing.gif" />
+    <Content Include="Content\weather\Read me.txt" />
+    <Content Include="Content\weather\r_b.gif" />
+    <Content Include="Content\weather\r_t1.gif" />
+    <Content Include="Content\weather\tem1.gif" />
+    <Content Include="Content\weather\tem2.gif" />
+    <Content Include="Content\weather\tem3.gif" />
+    <Content Include="Content\weather\tem4.gif" />
+    <Content Include="Content\weather\tem5.gif" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Ignore\WebServiceTest.asmx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\System\Views\web.config" />
+    <Content Include="Areas\System\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\System\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\System\Views\Home\Index.cshtml" />
+    <Content Include="CfgFiles\Unity.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Test\MyWebForm.aspx" />
+    <Content Include="Web References\Weather\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </Content>
+    <Content Include="Views\MyWeather\Index.cshtml" />
+    <None Include="Web References\Weather\WeatherWebService.disco" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\First\Index.cshtml" />
+    <Content Include="Views\First\Data.cshtml" />
+    <Content Include="Views\Second\RazorShow.cshtml" />
+    <Content Include="Views\Second\Render.cshtml" />
+    <Content Include="Views\Second\PartialPage.cshtml" />
+    <Content Include="Views\Fourth\Login.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Test\MyHandler.ashx" />
+    <Content Include="Views\Second\DB.cshtml" />
+    <Content Include="Views\Third\Index.cshtml" />
+    <Content Include="Views\Pipe\Handler.cshtml" />
+    <Content Include="Views\Pipe\Refuse.cshtml" />
+    <None Include="Web References\Weather\WeatherWebService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\System\Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bussiness.EFModel\Bussiness.EFModel.csproj">
+      <Project>{261436a7-cf58-4495-b0e2-cb4c0ff9fbc5}</Project>
+      <Name>Bussiness.EFModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bussiness.Interface\Bussiness.Interface.csproj">
+      <Project>{68a66389-b073-4801-b0ad-0ccac5770c42}</Project>
+      <Name>Bussiness.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bussiness.IOCAOP\Bussiness.IOCAOP.csproj">
+      <Project>{0b342edb-ae33-4b75-a266-deb27e8ee865}</Project>
+      <Name>Bussiness.IOCAOP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bussiness.Service\Bussiness.Service.csproj">
+      <Project>{d86dff07-0846-46b0-91a2-26efdc818db9}</Project>
+      <Name>Bussiness.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Remote.Interface\Remote.Interface.csproj">
+      <Project>{b08e4689-c25f-490f-a6ea-1cb67fed41b7}</Project>
+      <Name>Remote.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Remote.Model\Remote.Model.csproj">
+      <Project>{82291b30-4ec4-4c44-a960-c928ef6787a4}</Project>
+      <Name>Remote.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Remote.Service\Remote.Service.csproj">
+      <Project>{c58ccc6e-b001-4602-bdc7-547011cdcb69}</Project>
+      <Name>Remote.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://www.webxml.com.cn/WebServices/WeatherWebService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Weather\</RelPath>
+      <UpdateFromURL>http://www.webxml.com.cn/WebServices/WeatherWebService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>Demo_Mvc5_Weather_WeatherWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62412</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:8090/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>这台计算机上缺少此项目引用的 NuGet 程序包。使用“NuGet 程序包还原”可下载这些程序包。有关更多信息，请参见 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的文件是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

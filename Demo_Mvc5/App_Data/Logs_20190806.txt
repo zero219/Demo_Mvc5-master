@@ -1,0 +1,8 @@
+2019-08-06 15:29:18,785 [6] INFO  MvcApplication - GlobalModule_GlobalModuleEvent
+2019-08-06 15:29:18,853 [6] INFO  MvcApplication - Session_Start
+2019-08-06 15:33:26,129 [6] INFO  MvcApplication - GlobalModule_GlobalModuleEvent
+2019-08-06 15:33:26,205 [6] INFO  MvcApplication - Session_Start
+2019-08-06 15:34:20,989 [6] INFO  MvcApplication - GlobalModule_GlobalModuleEvent
+2019-08-06 15:34:21,064 [6] INFO  MvcApplication - Session_Start
+2019-08-06 15:36:55,469 [6] INFO  MvcApplication - GlobalModule_GlobalModuleEvent
+2019-08-06 15:36:55,536 [6] INFO  MvcApplication - Session_Start

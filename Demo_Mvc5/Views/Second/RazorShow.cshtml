@@ -1,0 +1,64 @@
+﻿@using Demo_Mvc5.Models.RazorHtml
+@{
+    ViewBag.Title = "RazorShow";
+}
+
+<h2>RazorShow</h2>
+<div class="=row">
+    <h3>@DateTime.Now.ToString("yyyy-MM-dd")</h3>@*行内语法*@
+
+    @{
+        var age = 25;
+        <p>html标签会当作前台代码</p>
+        Response.Write("Multi-Line : Age is " + age + "<br />");/*后台代码*/
+    }
+
+
+    @if (1 > 2)
+    {
+        <p>1>2</p>
+    }
+    else
+    {
+        <p>true</p>
+    }
+
+    @Html.Br()
+
+    @for (int i = 0; i < 3; i++)
+    {
+        Response.Write(i);
+    }
+
+</div>
+
+<div class="=row">
+    <p>等于webform的ascx</p>
+    <p>Html.RenderPartial 在指定位置添加一个view，返回void 需要放入大括号 </p>
+    @{Html.RenderPartial("PartialPage", "这里是Html.RenderPartial");}
+    @Html.Br()
+    <p>Html.Partial 返回的是字符串，放入当前位置</p>
+    @Html.Partial("PartialPage", "这里是Html.Partial")
+
+    @Html.Br()
+    <p>Html.Action 返回的是字符串，放入当前位置,需要经过action的处理</p>
+    @Html.Action("Render", "Second", new { name = "Html.Action" })
+
+    @Html.Br()
+    <p>Html.RenderAction 在指定位置添加一个view，返回void 需要放入大括号,需要经过action的处理</p>
+    @{Html.RenderAction("Render", "Second", new { name = "Html.RenderAction" });}
+</div>
+
+<div>
+    @section SecondPart{
+        母版页第二部分
+    }
+</div>
+
+<div>
+    @Html.TextBox("UserNamePost")
+</div>
+
+@Html.Submit("SubmitButton")
+
+
